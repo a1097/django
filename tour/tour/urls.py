@@ -3,6 +3,7 @@ Definition of urls for tour.
 """
 
 from django.conf.urls import include, url
+import hellodjango.views
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -10,7 +11,8 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     # Examples:
-    # url(r'^$', tour.views.home, name='home'),
+    url(r'^$', hellodjango.views.index, name='index'),
+    url(r'^home$', hellodjango.views.index, name='home'),
     # url(r'^tour/', include('tour.tour.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

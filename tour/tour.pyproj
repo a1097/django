@@ -3,6 +3,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>tour</Name>
     <RootNamespace>tour</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -29,6 +30,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="hellodjango\admin.py" />
+    <Compile Include="hellodjango\apps.py" />
+    <Compile Include="hellodjango\migrations\__init__.py" />
+    <Compile Include="hellodjango\models.py" />
+    <Compile Include="hellodjango\tests.py" />
+    <Compile Include="hellodjango\views.py" />
+    <Compile Include="hellodjango\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="tour\__init__.py" />
     <Compile Include="tour\settings.py" />
@@ -36,10 +44,26 @@
     <Compile Include="tour\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="hellodjango\templates\hellodjango\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="hellodjango\" />
+    <Folder Include="hellodjango\migrations\" />
+    <Folder Include="hellodjango\templates\" />
+    <Folder Include="hellodjango\templates\hellodjango\" />
     <Folder Include="tour\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
