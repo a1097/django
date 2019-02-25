@@ -44,12 +44,16 @@
     <Compile Include="tour\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="hellodjango\static\site.css" />
+    <Content Include="hellodjango\templates\hellodjango\about.html" />
     <Content Include="hellodjango\templates\hellodjango\index.html" />
+    <Content Include="hellodjango\templates\hellodjango\layout.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="hellodjango\" />
     <Folder Include="hellodjango\migrations\" />
+    <Folder Include="hellodjango\static\" />
     <Folder Include="hellodjango\templates\" />
     <Folder Include="hellodjango\templates\hellodjango\" />
     <Folder Include="tour\" />

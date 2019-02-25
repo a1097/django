@@ -13,6 +13,7 @@ urlpatterns = [
     # Examples:
     url(r'^$', hellodjango.views.index, name='index'),
     url(r'^home$', hellodjango.views.index, name='home'),
+    url(r'^about$', hellodjango.views.about, name='about'),
     # url(r'^tour/', include('tour.tour.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
